@@ -15,24 +15,3 @@
   text-transform: uppercase;
 }
 
-.link{
-	font-weight: 700;
-	padding: 21px;
-	display: inline-block; /*crea caja de bloques, pero al estar con cajas que lo rodean es una caja en linea */
-}
-
-.logo{
-	float: right;
-}
-
-header{
-	position: fixed;
-	background: white;
-	width: 100%
-	top: 0;
-}
-
-.menu{
-	padding: 14px 70px;
-	overflow: auto;
-}
