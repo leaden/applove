@@ -1,23 +1,20 @@
 /*
  * Archivo principal de funcionalidad de JS
  */
-
- (function main(){
- 	var boxes = array.from(document.getelementsByClassName("box-services"));
-
- })();
-
-var modal = document.getelementsById("box-services-modal");
-
-boxes.forEach(function(box){
-	box.addEventListener("click", function(){
-    modal.classList.remove("hide")
-	});
- });
-
-var close = document.querySelector("#box-services-modal .close");
-close.addEventListener("click", function(){
-   modal.classList.add("hide");
-
-});
-})();
+*/ 
+(function main(){
+	var boxes = Array.from(document.getElementsByClassName("box-services"));
+	var modal = document.getElementById("box-services-modal");
+	var bodyModal, close, img;
+	boxes.forEach(function(box){
+		box.addEventListener("click", function(){
+			modal.innerHTML = "";
+			bodyModal = document.createElement("div");
+			bodyModal.classList.add("modal-body");
+			bodyModal.innerHTML = box.innerHTML;			
+			modal.appendChild(bodyModal);
+			modal.classList.remove("hide");
+			close = document.createElement("div");
+			close.classList.add("close");
+			img = document.createElement("img");
+			img.setAttribute("src", "http://tojaeurope.com/gallery/
